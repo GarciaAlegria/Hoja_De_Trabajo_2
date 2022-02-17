@@ -13,25 +13,27 @@ import java.io.*;
 public class Controlador {
 
    public static void main(String[] args){
-   /* private Scanner scan = new Scanner(System.in);
-    private Scanner stringscan = new Scanner(System.in);
-        
-    public String directorio(){
-        System.out.println("Ingrese el directorio donde se guardarán o se encuentran los datos");
-        System.out.println("por Ejemplo: D:\\Programas\\");
-       */ //String direct = stringscan.nextLine(); 
+   //Aqui se le pedira al usuario que ingrese la direccion del archivo txt 
+   Scanner scan = new Scanner(System.in);
+   System.out.println("");
+   System.out.println("************Bienvenidos al programa Calculadora de expersiones postfish, que bueno tenerte de vuelta*************");
+   System.out.println("");
+   System.out.println("Ingrese el directorio donde se guardarán o se encuentran los datos");
+   System.out.println("por Ejemplo: D:\\Programas\\"); 
+   String Ubicacion = scan.nextLine();
+   int resultado = 0;     
+    //Aqui es donde leera el archivo que ingreos y lo imprimira
        try{
-        FileReader fr = new FileReader("C:\\Users\\Abner Garcia\\Documents\\UVG 3 SEMESTRE\\CURSOS\\ALGORITMOS DE DATOS\\Hoja2\\datos.txt");
-        BufferedReader br = new BufferedReader(fr);
+        BufferedReader br = new BufferedReader(new FileReader(Ubicacion));
         String cadena;
         while((cadena= br.readLine())!=null){
-            System.out.println(""+cadena);
+            System.out.println("Operacion a Realizar: "+cadena);
         }
 }
 catch (Exception e){
 
 }
-        //return direct; 
+        
 }
 }
 
